@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/api/main")
+ * @Route("/main")
  */
 class MainController extends AbstractController
 {
