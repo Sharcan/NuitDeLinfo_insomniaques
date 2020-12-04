@@ -287,8 +287,8 @@ class UserAnswerController extends AbstractController
             $userAnswers->setBoats($_COOKIE['boats']);
             $userAnswers->setSurfers($_COOKIE['surfers']);
             $userAnswers->setCreatedAt(new DateTime());
-            $userAnswers->setUserId(new User());
-
+            // $userAnswers->setUserId(new User());
+            
 
             // $entityManager = $this->getDoctrine()->getManager();
             // $entityManager->persist($userAnswers);
