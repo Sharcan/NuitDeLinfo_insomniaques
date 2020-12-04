@@ -25,3 +25,18 @@ function onLocationError(e) {
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
+
+// XMLHttpRequest
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       response = JSON.parse(this.responseText);
+       console.log(response);
+       response.forEach(spot => {
+            L.marker([spot[0], spot[1]]).addTo(map);
+       });
+    }
+};
+xhttp.open("GET", "http://127.0.0.1:8000/api/map", true);
+xhttp.send();
