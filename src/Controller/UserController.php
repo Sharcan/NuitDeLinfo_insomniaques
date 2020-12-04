@@ -106,4 +106,14 @@ class UserController extends AbstractController
 
         return $this->redirectToRoute('user_index');
     }
+
+    /**
+     * @Route("/questions", name="user_questions")
+     */
+    public function showQuestions(): Response
+    {
+        return $this->render('user/questions.html.twig', [
+            'controller_name' => 'MapController',
+        ]);
+    }
 }
